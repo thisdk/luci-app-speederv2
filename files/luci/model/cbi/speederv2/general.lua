@@ -9,7 +9,7 @@ end
 if has_bin("speederv2") then
     uci:foreach("speederv2", "servers", function(s)
         if s.server_port and s.listen_port then
-            servers[#servers+1] = {name = s[".name"], alias = s.alias or "%s:%s" %{s.server_ip, s.server_port}}
+            servers[#servers+1] = {name = s[".name"], alias = s.alias or "%s:%s" %{s.server_port, s.listen_port}}
         end
     end)
 
