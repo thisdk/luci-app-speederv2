@@ -20,4 +20,4 @@ before_script:
 
 script:
     - make package/luci-app-speederv2/compile V=s
-    - stat bin/packages/arm_cortex-a9/base/luci-app-speederv2_$PACKAGE_VERSION-$PACKAGE_RELEASE_$PACKAGE_ARCH.ipk
+    - stat bin/packages/arm_cortex-a9/base/luci-app-speederv2_${PACKAGE_VERSION}-${PACKAGE_RELEASE}_${PACKAGE_ARCH}.ipk
