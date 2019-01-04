@@ -4,7 +4,7 @@ language: c
 
 before_script:
     - wget https://downloads.openwrt.org/releases/18.06.1/targets/bcm53xx/generic/openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz
-    - tar xvf openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz
+    - tar xf openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz
     - cd openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64
     - mkdir luci-app-speederv2
     - mv files tools Makefile openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64/package
