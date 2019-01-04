@@ -26,3 +26,4 @@ deploy:
   file: bin/packages/arm_cortex-a9/base/${PACKAGE_NAME}_${PACKAGE_VERSION}-${PACKAGE_RELEASE}_${PACKAGE_ARCH}.ipk
   on:
     repo: haodong/${PACKAGE_NAME}
+    tags: true
