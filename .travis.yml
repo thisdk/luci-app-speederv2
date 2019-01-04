@@ -3,7 +3,6 @@ sudo: true
 language: c
 
 before_script:
-    - sudo apt-get install tree
     - wget https://downloads.openwrt.org/releases/18.06.1/targets/bcm53xx/generic/openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz
     - tar xf openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz
     - mkdir -p openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64/package/luci-app-speederv2
@@ -17,4 +16,4 @@ before_script:
 
 script:
     - make package/luci-app-speederv2/compile V=s
-    - tree -Cal bin
+    - stat bin/packages/arm_cortex-a9/base/luci-app-speederv2_1.1.0-1_all.ipk
