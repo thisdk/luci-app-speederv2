@@ -1,6 +1,10 @@
 dist: trusty
 sudo: true
 language: c
+env:
+    PACKAGE_VERSION=`grep PKG_VERSION Makefile | sed 's/.*:=//'`
+    PACKAGE_RELEASE=`grep PKG_RELEASE Makefile | sed 's/.*:=//'`
+    PACKAGE_ARCH=`grep PKGARCH Makefile | sed 's/.*:=//'`
 
 before_script:
     - wget https://downloads.openwrt.org/releases/18.06.1/targets/bcm53xx/generic/openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64.tar.xz
@@ -16,4 +20,4 @@ before_script:
 
 script:
     - make package/luci-app-speederv2/compile V=s
-    - stat bin/packages/arm_cortex-a9/base/luci-app-speederv2_1.1.0-1_all.ipk
+    - stat bin/packages/arm_cortex-a9/base/luci-app-speederv2_$PACKAGE_VERSION-$PACKAGE_RELEASE_$PACKAGE_ARCH.ipk
