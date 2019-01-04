@@ -1,4 +1,4 @@
-# luci-app-speederv2
+# luci-app-speederv2 [![Build Status](https://travis-ci.org/haodong/luci-app-speederv2.svg?branch=master)](https://travis-ci.org/haodong/luci-app-speederv2)
 适配于openwrt的UDPspeeder辅助插件
 
 使用方法：
