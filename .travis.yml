@@ -16,4 +16,4 @@ before_script:
 
 script:
     - make package/luci-app-speederv2/compile V=s
-    - find -type f | grep luci-app-speederv2.ipk
+    - tree -Cal bin
