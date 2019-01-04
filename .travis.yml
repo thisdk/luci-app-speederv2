@@ -1,5 +1,5 @@
 dist: trusty
-sudo: false
+sudo: true
 language: c
 
 before_script:
@@ -9,13 +9,11 @@ before_script:
     - mkdir luci-app-speederv2
     - mv files tools Makefile openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64/package
     - cd openwrt-sdk-18.06.1-bcm53xx_gcc-7.3.0_musl_eabi.Linux-x86_64
-    #- pushd package/luci-app-speederv2/tools/po2lmo
-    #- make
-    #- make install
-    #- popd
+    - pushd package/luci-app-speederv2/tools/po2lmo
+    - make
+    - sudo make install
+    - popd
     - make defconfig
 
 script:
     - make package/luci-app-speederv2/compile V=s
-
-#before_deploy:
